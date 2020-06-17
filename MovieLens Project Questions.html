@@ -17118,7 +17118,7 @@ in one go.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#your answer here</span>
@@ -17126,17 +17126,14 @@ in one go.</p>
 <span class="c1">#all records with more than 100 ratings</span>
 <span class="n">userating_more_than_100</span> <span class="o">=</span> <span class="n">userating_movie_id</span><span class="p">[</span><span class="n">userating_movie_id</span><span class="p">[</span><span class="s1">&#39;user id&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">]</span>
 
-<span class="c1">#finding the average of the ratings</span>
-<span class="c1">#movie_listings = list(userating_more_than_100.index.values) </span>
-
 <span class="c1">#finding out  the average of movies ratings</span>
 <span class="n">userrating_movie_rating</span> <span class="o">=</span> <span class="n">userrating</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;movie id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="c1">#selecting only movies with more than 100 listings</span>
 <span class="n">userating_more_than_100</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">userating_more_than_100</span> <span class="p">,</span><span class="n">userrating_movie_rating</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span> <span class="s1">&#39;movie id&#39;</span><span class="p">)</span>
 <span class="n">userating_more_than_100</span> <span class="o">=</span> <span class="n">userating_more_than_100</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;rating_y&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">movies_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">userating_more_than_100</span><span class="p">,</span> <span class="n">moviegenre</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;movie id&#39;</span><span class="p">)</span>
-<span class="n">movies_list_final</span> <span class="o">=</span> <span class="n">movies_list</span><span class="p">[[</span><span class="s1">&#39;movie id&#39;</span><span class="p">,</span><span class="s1">&#39;rating_y&#39;</span><span class="p">,</span> <span class="s1">&#39;movie title&#39;</span><span class="p">]]</span>
-<span class="n">movies_list_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rating_y&#39;</span><span class="p">:</span><span class="s1">&#39;rating&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movies_list</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rating_y&#39;</span><span class="p">:</span><span class="s1">&#39;rating&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movies_list_final</span> <span class="o">=</span> <span class="n">movies_list</span><span class="p">[[</span><span class="s1">&#39;movie id&#39;</span><span class="p">,</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;movie title&#39;</span><span class="p">]]</span>
 <span class="c1">#first 25 movies with highest average rating and more than 100 ratings</span>
 <span class="n">movies_list_final</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
 </pre></div>
@@ -17151,22 +17148,7 @@ in one go.</p>
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\frame.py:4133: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  errors=errors,
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[77]:</div>
+    <div class="prompt output_prompt">Out[98]:</div>
 
 
 
