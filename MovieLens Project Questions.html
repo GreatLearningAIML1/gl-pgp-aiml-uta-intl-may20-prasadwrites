@@ -14636,10 +14636,11 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">genre_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;unknown&#39;</span><span class="p">,</span><span class="s1">&#39;Action&#39;</span><span class="p">,</span><span class="s1">&#39;Adventure&#39;</span><span class="p">,</span><span class="s1">&#39;Animation&#39;</span><span class="p">,</span><span class="s1">&#39;Childrens&#39;</span><span class="p">,</span><span class="s1">&#39;Comedy&#39;</span><span class="p">,</span><span class="s1">&#39;Crime&#39;</span><span class="p">,</span><span class="s1">&#39;Documentary&#39;</span><span class="p">,</span><span class="s1">&#39;Drama&#39;</span><span class="p">,</span><span class="s1">&#39;Fantasy&#39;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># moviegenre is our dataframe for item data.</span>
+<span class="n">genre_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;unknown&#39;</span><span class="p">,</span><span class="s1">&#39;Action&#39;</span><span class="p">,</span><span class="s1">&#39;Adventure&#39;</span><span class="p">,</span><span class="s1">&#39;Animation&#39;</span><span class="p">,</span><span class="s1">&#39;Childrens&#39;</span><span class="p">,</span><span class="s1">&#39;Comedy&#39;</span><span class="p">,</span><span class="s1">&#39;Crime&#39;</span><span class="p">,</span><span class="s1">&#39;Documentary&#39;</span><span class="p">,</span><span class="s1">&#39;Drama&#39;</span><span class="p">,</span><span class="s1">&#39;Fantasy&#39;</span><span class="p">,</span>
               <span class="s1">&#39;Film-Noir&#39;</span><span class="p">,</span><span class="s1">&#39;Horror&#39;</span><span class="p">,</span><span class="s1">&#39;Musical&#39;</span><span class="p">,</span><span class="s1">&#39;Mystery&#39;</span><span class="p">,</span><span class="s1">&#39;Romance&#39;</span><span class="p">,</span><span class="s1">&#39;Sci-Fi&#39;</span><span class="p">,</span><span class="s1">&#39;Thriller&#39;</span><span class="p">,</span><span class="s1">&#39;War&#39;</span><span class="p">,</span><span class="s1">&#39;Western&#39;</span><span class="p">]</span>
 <span class="n">genre_count_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;count of geners&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="n">moviegenre</span><span class="p">[</span><span class="s1">&#39;unknown&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span> 
                     <span class="n">moviegenre</span><span class="p">[</span><span class="s1">&#39;Action&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span> 
@@ -15605,10 +15606,11 @@ Western                   27
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">moviegenre</span><span class="p">[</span><span class="n">moviegenre</span><span class="o">.</span><span class="n">unknown</span><span class="o">!=</span><span class="mi">1</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">moviegenre_dropUnknown</span> <span class="o">=</span> <span class="n">moviegenre</span><span class="p">[</span><span class="n">moviegenre</span><span class="o">.</span><span class="n">unknown</span><span class="o">!=</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">moviegenre_dropUnknown</span>
 </pre></div>
 
     </div>
@@ -15621,7 +15623,7 @@ Western                   27
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[65]:</div>
+    <div class="prompt output_prompt">Out[85]:</div>
 
 
 
@@ -15655,7 +15657,6 @@ Western                   27
       <th>Comedy</th>
       <th>Crime</th>
       <th>...</th>
-      <th>Fantasy</th>
       <th>Film-Noir</th>
       <th>Horror</th>
       <th>Musical</th>
@@ -15665,6 +15666,7 @@ Western                   27
       <th>Thriller</th>
       <th>War</th>
       <th>Western</th>
+      <th>release year</th>
     </tr>
   </thead>
   <tbody>
@@ -15690,7 +15692,7 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1995</td>
     </tr>
     <tr>
       <th>1</th>
@@ -15711,10 +15713,10 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>1995</td>
     </tr>
     <tr>
       <th>2</th>
@@ -15735,10 +15737,10 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>1995</td>
     </tr>
     <tr>
       <th>3</th>
@@ -15762,7 +15764,7 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1995</td>
     </tr>
     <tr>
       <th>4</th>
@@ -15783,10 +15785,10 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>1995</td>
     </tr>
     <tr>
       <th>...</th>
@@ -15834,7 +15836,7 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1998</td>
     </tr>
     <tr>
       <th>1677</th>
@@ -15853,12 +15855,12 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>1998</td>
     </tr>
     <tr>
       <th>1678</th>
@@ -15877,12 +15879,12 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>1998</td>
     </tr>
     <tr>
       <th>1679</th>
@@ -15906,7 +15908,7 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1994</td>
     </tr>
     <tr>
       <th>1680</th>
@@ -15930,11 +15932,11 @@ Western                   27
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1996</td>
     </tr>
   </tbody>
 </table>
-<p>1680 rows × 22 columns</p>
+<p>1680 rows × 23 columns</p>
 </div>
 </div>
 
