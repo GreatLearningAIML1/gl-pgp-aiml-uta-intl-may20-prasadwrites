@@ -13084,7 +13084,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[230]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -13110,7 +13110,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[231]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -13142,7 +13142,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[232]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/sample_data/aiml/My Drive/AIML/Labels.csv&#39;</span><span class="p">)</span>
@@ -13159,7 +13159,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[232]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -13177,7 +13177,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[233]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Label&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -13193,7 +13193,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[233]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -13271,20 +13271,44 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[234]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">label_unique</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">Label</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">label_unique</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;Small-flowered Cranesbill&#39;, &#39;Fat Hen&#39;, &#39;Shepherds Purse&#39;,
+       &#39;Common wheat&#39;, &#39;Common Chickweed&#39;, &#39;Charlock&#39;, &#39;Cleavers&#39;,
+       &#39;Scentless Mayweed&#39;, &#39;Sugar beet&#39;, &#39;Maize&#39;, &#39;Black-grass&#39;,
+       &#39;Loose Silky-bent&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[235]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">label_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="n">label_unique</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;plant_label&#39;</span><span class="p">])</span>
@@ -13301,7 +13325,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[235]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -13389,7 +13413,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[236]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;/content/sample_data/aiml/My Drive/AIML/images.npy&#39;</span><span class="p">)</span>
@@ -13406,7 +13430,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[236]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -13423,7 +13447,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[237]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Visualize images in the dataset</span>
@@ -13440,13 +13464,13 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[237]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fb12ca840b8&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0cc0a769e8&gt;</pre>
 </div>
 
 </div>
@@ -13491,7 +13515,7 @@ c. Visualize data after pre-processing.</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[238]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Normalizing</span>
@@ -13505,7 +13529,7 @@ c. Visualize data after pre-processing.</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[239]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Guassian blurring</span>
@@ -13523,7 +13547,7 @@ c. Visualize data after pre-processing.</strong></p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[239]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -13540,7 +13564,7 @@ c. Visualize data after pre-processing.</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[240]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Visualizing data after preprocessing</span>
@@ -13557,13 +13581,13 @@ c. Visualize data after pre-processing.</strong></p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[240]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fb12d1daef0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0cc0a5f438&gt;</pre>
 </div>
 
 </div>
@@ -13602,7 +13626,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[241]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">labelEncode</span> <span class="o">=</span> <span class="n">LabelBinarizer</span><span class="p">()</span>
@@ -13616,7 +13640,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[242]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">labelBinEncoded</span>
@@ -13632,7 +13656,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[242]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -13655,7 +13679,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[243]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">blurred_images</span><span class="p">,</span> <span class="n">labelBinEncoded</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -13669,7 +13693,40 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[244]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[37]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_train</span><span class="o">.</span><span class="n">shape</span>
@@ -13685,7 +13742,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[244]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -13702,7 +13759,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[245]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span>
@@ -13718,7 +13775,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[245]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -13735,7 +13792,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[246]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_test</span><span class="o">.</span><span class="n">shape</span>
@@ -13751,7 +13808,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[246]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -13768,7 +13825,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[247]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span>
@@ -13784,7 +13841,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[247]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
@@ -13801,7 +13858,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[248]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_val</span><span class="o">.</span><span class="n">shape</span>
@@ -13817,7 +13874,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[248]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -13834,7 +13891,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[249]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_val</span><span class="o">.</span><span class="n">shape</span>
@@ -13850,7 +13907,7 @@ d. Check the shape of data, Reshape data into shapes compatible with Keras model
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[249]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -13885,7 +13942,7 @@ b. Set optimizer and loss function. (Use Adam optimizer and categorical crossent
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[250]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
@@ -13931,7 +13988,7 @@ b. Set optimizer and loss function. (Use Adam optimizer and categorical crossent
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[251]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">opt</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span>
@@ -13946,7 +14003,7 @@ b. Set optimizer and loss function. (Use Adam optimizer and categorical crossent
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[252]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
@@ -13966,61 +14023,61 @@ b. Set optimizer and loss function. (Use Adam optimizer and categorical crossent
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Model: &#34;sequential_4&#34;
+<pre>Model: &#34;sequential_1&#34;
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
-conv2d_24 (Conv2D)           (None, 124, 124, 64)      4864      
+conv2d (Conv2D)              (None, 124, 124, 64)      4864      
 _________________________________________________________________
-batch_normalization_32 (Batc (None, 124, 124, 64)      256       
+batch_normalization (BatchNo (None, 124, 124, 64)      256       
 _________________________________________________________________
-conv2d_25 (Conv2D)           (None, 120, 120, 64)      102464    
+conv2d_1 (Conv2D)            (None, 120, 120, 64)      102464    
 _________________________________________________________________
-max_pooling2d_12 (MaxPooling (None, 60, 60, 64)        0         
+max_pooling2d (MaxPooling2D) (None, 60, 60, 64)        0         
 _________________________________________________________________
-batch_normalization_33 (Batc (None, 60, 60, 64)        256       
+batch_normalization_1 (Batch (None, 60, 60, 64)        256       
 _________________________________________________________________
-dropout_20 (Dropout)         (None, 60, 60, 64)        0         
+dropout (Dropout)            (None, 60, 60, 64)        0         
 _________________________________________________________________
-conv2d_26 (Conv2D)           (None, 56, 56, 128)       204928    
+conv2d_2 (Conv2D)            (None, 56, 56, 128)       204928    
 _________________________________________________________________
-batch_normalization_34 (Batc (None, 56, 56, 128)       512       
+batch_normalization_2 (Batch (None, 56, 56, 128)       512       
 _________________________________________________________________
-conv2d_27 (Conv2D)           (None, 52, 52, 128)       409728    
+conv2d_3 (Conv2D)            (None, 52, 52, 128)       409728    
 _________________________________________________________________
-max_pooling2d_13 (MaxPooling (None, 26, 26, 128)       0         
+max_pooling2d_1 (MaxPooling2 (None, 26, 26, 128)       0         
 _________________________________________________________________
-batch_normalization_35 (Batc (None, 26, 26, 128)       512       
+batch_normalization_3 (Batch (None, 26, 26, 128)       512       
 _________________________________________________________________
-dropout_21 (Dropout)         (None, 26, 26, 128)       0         
+dropout_1 (Dropout)          (None, 26, 26, 128)       0         
 _________________________________________________________________
-conv2d_28 (Conv2D)           (None, 22, 22, 256)       819456    
+conv2d_4 (Conv2D)            (None, 22, 22, 256)       819456    
 _________________________________________________________________
-batch_normalization_36 (Batc (None, 22, 22, 256)       1024      
+batch_normalization_4 (Batch (None, 22, 22, 256)       1024      
 _________________________________________________________________
-conv2d_29 (Conv2D)           (None, 18, 18, 256)       1638656   
+conv2d_5 (Conv2D)            (None, 18, 18, 256)       1638656   
 _________________________________________________________________
-max_pooling2d_14 (MaxPooling (None, 9, 9, 256)         0         
+max_pooling2d_2 (MaxPooling2 (None, 9, 9, 256)         0         
 _________________________________________________________________
-batch_normalization_37 (Batc (None, 9, 9, 256)         1024      
+batch_normalization_5 (Batch (None, 9, 9, 256)         1024      
 _________________________________________________________________
-dropout_22 (Dropout)         (None, 9, 9, 256)         0         
+dropout_2 (Dropout)          (None, 9, 9, 256)         0         
 _________________________________________________________________
-flatten_4 (Flatten)          (None, 20736)             0         
+flatten (Flatten)            (None, 20736)             0         
 _________________________________________________________________
-dense_12 (Dense)             (None, 256)               5308672   
+dense (Dense)                (None, 256)               5308672   
 _________________________________________________________________
-batch_normalization_38 (Batc (None, 256)               1024      
+batch_normalization_6 (Batch (None, 256)               1024      
 _________________________________________________________________
-dropout_23 (Dropout)         (None, 256)               0         
+dropout_3 (Dropout)          (None, 256)               0         
 _________________________________________________________________
-dense_13 (Dense)             (None, 256)               65792     
+dense_1 (Dense)              (None, 256)               65792     
 _________________________________________________________________
-batch_normalization_39 (Batc (None, 256)               1024      
+batch_normalization_7 (Batch (None, 256)               1024      
 _________________________________________________________________
-dropout_24 (Dropout)         (None, 256)               0         
+dropout_4 (Dropout)          (None, 256)               0         
 _________________________________________________________________
-dense_14 (Dense)             (None, 12)                3084      
+dense_2 (Dense)              (None, 12)                3084      
 =================================================================
 Total params: 8,563,276
 Trainable params: 8,560,460
@@ -14044,7 +14101,7 @@ _________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[253]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">),</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -14065,59 +14122,59 @@ _________________________________________________________________
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/20
- 2/67 [..............................] - ETA: 13s - loss: 4.1563 - accuracy: 0.0800WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0728s vs `on_train_batch_end` time: 0.1686s). Check your callbacks.
-67/67 [==============================] - 17s 256ms/step - loss: 2.3415 - accuracy: 0.3359 - val_loss: 2.8495 - val_accuracy: 0.1262
+ 2/67 [..............................] - ETA: 2s - loss: 3.9820 - accuracy: 0.0900WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0326s vs `on_train_batch_end` time: 0.0547s). Check your callbacks.
+67/67 [==============================] - 7s 109ms/step - loss: 2.2684 - accuracy: 0.3537 - val_loss: 2.8312 - val_accuracy: 0.1262
 Epoch 2/20
-67/67 [==============================] - 17s 250ms/step - loss: 1.5394 - accuracy: 0.5218 - val_loss: 3.8916 - val_accuracy: 0.1262
+67/67 [==============================] - 6s 95ms/step - loss: 1.4638 - accuracy: 0.5383 - val_loss: 4.1424 - val_accuracy: 0.1262
 Epoch 3/20
-67/67 [==============================] - 17s 250ms/step - loss: 1.1729 - accuracy: 0.6211 - val_loss: 4.1256 - val_accuracy: 0.1262
+67/67 [==============================] - 6s 95ms/step - loss: 1.1129 - accuracy: 0.6421 - val_loss: 5.5497 - val_accuracy: 0.1262
 Epoch 4/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.8754 - accuracy: 0.7053 - val_loss: 5.2572 - val_accuracy: 0.1262
+67/67 [==============================] - 6s 96ms/step - loss: 0.8328 - accuracy: 0.7239 - val_loss: 5.0337 - val_accuracy: 0.1262
 Epoch 5/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.6910 - accuracy: 0.7729 - val_loss: 5.3506 - val_accuracy: 0.1262
+67/67 [==============================] - 6s 95ms/step - loss: 0.6659 - accuracy: 0.7814 - val_loss: 6.9377 - val_accuracy: 0.1178
 Epoch 6/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.5005 - accuracy: 0.8340 - val_loss: 5.8901 - val_accuracy: 0.0954
+67/67 [==============================] - 6s 95ms/step - loss: 0.4624 - accuracy: 0.8538 - val_loss: 6.5168 - val_accuracy: 0.1010
 Epoch 7/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.3614 - accuracy: 0.8896 - val_loss: 5.1049 - val_accuracy: 0.1066
+67/67 [==============================] - 6s 95ms/step - loss: 0.3550 - accuracy: 0.8884 - val_loss: 7.1416 - val_accuracy: 0.1024
 Epoch 8/20
-67/67 [==============================] - 17s 251ms/step - loss: 0.2758 - accuracy: 0.9185 - val_loss: 3.1096 - val_accuracy: 0.2482
+67/67 [==============================] - 6s 95ms/step - loss: 0.2837 - accuracy: 0.9152 - val_loss: 4.2095 - val_accuracy: 0.1950
 Epoch 9/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.2428 - accuracy: 0.9317 - val_loss: 1.3786 - val_accuracy: 0.6424
+67/67 [==============================] - 6s 94ms/step - loss: 0.2330 - accuracy: 0.9347 - val_loss: 1.7152 - val_accuracy: 0.5442
 Epoch 10/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.2022 - accuracy: 0.9417 - val_loss: 0.6167 - val_accuracy: 0.8261
+67/67 [==============================] - 6s 95ms/step - loss: 0.1881 - accuracy: 0.9498 - val_loss: 0.5810 - val_accuracy: 0.8612
 Epoch 11/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.1528 - accuracy: 0.9615 - val_loss: 0.3307 - val_accuracy: 0.8864
+67/67 [==============================] - 6s 95ms/step - loss: 0.1402 - accuracy: 0.9624 - val_loss: 0.2209 - val_accuracy: 0.9383
 Epoch 12/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.1256 - accuracy: 0.9705 - val_loss: 0.1840 - val_accuracy: 0.9383
+67/67 [==============================] - 6s 95ms/step - loss: 0.1188 - accuracy: 0.9732 - val_loss: 0.2244 - val_accuracy: 0.9257
 Epoch 13/20
-67/67 [==============================] - 17s 251ms/step - loss: 0.1098 - accuracy: 0.9747 - val_loss: 0.0668 - val_accuracy: 0.9888
+67/67 [==============================] - 6s 95ms/step - loss: 0.1044 - accuracy: 0.9762 - val_loss: 0.0663 - val_accuracy: 0.9888
 Epoch 14/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.0815 - accuracy: 0.9838 - val_loss: 0.0455 - val_accuracy: 0.9916
+67/67 [==============================] - 6s 95ms/step - loss: 0.0920 - accuracy: 0.9783 - val_loss: 0.0593 - val_accuracy: 0.9916
 Epoch 15/20
-67/67 [==============================] - 17s 251ms/step - loss: 0.0847 - accuracy: 0.9829 - val_loss: 0.0478 - val_accuracy: 0.9944
+67/67 [==============================] - 6s 95ms/step - loss: 0.0810 - accuracy: 0.9826 - val_loss: 0.0515 - val_accuracy: 0.9916
 Epoch 16/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.0659 - accuracy: 0.9871 - val_loss: 0.0691 - val_accuracy: 0.9916
+67/67 [==============================] - 6s 94ms/step - loss: 0.0611 - accuracy: 0.9907 - val_loss: 0.0315 - val_accuracy: 0.9972
 Epoch 17/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.0673 - accuracy: 0.9865 - val_loss: 0.0322 - val_accuracy: 0.9958
+67/67 [==============================] - 6s 95ms/step - loss: 0.0655 - accuracy: 0.9856 - val_loss: 0.0405 - val_accuracy: 0.9944
 Epoch 18/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.0486 - accuracy: 0.9913 - val_loss: 0.0321 - val_accuracy: 0.9958
+67/67 [==============================] - 6s 94ms/step - loss: 0.0498 - accuracy: 0.9937 - val_loss: 0.0418 - val_accuracy: 0.9930
 Epoch 19/20
-67/67 [==============================] - 17s 251ms/step - loss: 0.0467 - accuracy: 0.9925 - val_loss: 0.0346 - val_accuracy: 0.9944
+67/67 [==============================] - 6s 95ms/step - loss: 0.0440 - accuracy: 0.9919 - val_loss: 0.0413 - val_accuracy: 0.9930
 Epoch 20/20
-67/67 [==============================] - 17s 250ms/step - loss: 0.0469 - accuracy: 0.9913 - val_loss: 0.0542 - val_accuracy: 0.9888
+67/67 [==============================] - 6s 95ms/step - loss: 0.0465 - accuracy: 0.9898 - val_loss: 0.0453 - val_accuracy: 0.9930
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[253]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;tensorflow.python.keras.callbacks.History at 0x7fb12bf93dd8&gt;</pre>
+<pre>&lt;tensorflow.python.keras.callbacks.History at 0x7f0c597dda90&gt;</pre>
 </div>
 
 </div>
@@ -14128,7 +14185,7 @@ Epoch 20/20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[254]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Score trained model.</span>
@@ -14151,8 +14208,8 @@ Epoch 20/20
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>23/23 [==============================] - 1s 41ms/step - loss: 0.0386 - accuracy: 0.9930
-Test loss: 0.03859110176563263
+<pre>23/23 [==============================] - 0s 22ms/step - loss: 0.0347 - accuracy: 0.9930
+Test loss: 0.03470199182629585
 Test accuracy: 0.992977499961853
 </pre>
 </div>
@@ -14164,7 +14221,7 @@ Test accuracy: 0.992977499961853
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[255]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
@@ -14182,7 +14239,7 @@ Test accuracy: 0.992977499961853
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[255]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -14199,7 +14256,7 @@ Test accuracy: 0.992977499961853
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[256]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">confusionMTX</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test_class</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span> 
@@ -14216,24 +14273,24 @@ Test accuracy: 0.992977499961853
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[256]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[36,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0],
+<pre>array([[35,  0,  0,  0,  0,  0,  2,  0,  0,  0,  0,  0],
        [ 0, 50,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
        [ 0,  0, 51,  0,  0,  0,  0,  0,  0,  0,  0,  0],
        [ 0,  0,  0, 95,  0,  0,  0,  0,  0,  0,  0,  0],
        [ 0,  0,  0,  0, 35,  0,  0,  0,  0,  0,  0,  0],
-       [ 0,  0,  0,  0,  0, 84,  0,  0,  0,  0,  1,  0],
-       [ 0,  0,  0,  0,  0,  0, 95,  0,  0,  0,  1,  0],
+       [ 0,  0,  0,  0,  0, 85,  0,  0,  0,  0,  0,  0],
+       [ 0,  0,  0,  0,  0,  0, 96,  0,  0,  0,  0,  0],
        [ 0,  0,  0,  0,  0,  0,  0, 26,  0,  0,  0,  0],
        [ 0,  0,  0,  0,  0,  0,  0,  0, 77,  0,  0,  0],
-       [ 0,  0,  0,  0,  0,  0,  0,  0,  0, 40,  0,  0],
+       [ 0,  0,  0,  0,  0,  1,  0,  0,  0, 39,  0,  0],
        [ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 60,  0],
-       [ 0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0, 58]])</pre>
+       [ 0,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0, 58]])</pre>
 </div>
 
 </div>
@@ -14252,7 +14309,7 @@ Test accuracy: 0.992977499961853
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[257]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#x_test[2]</span>
@@ -14309,7 +14366,7 @@ Sample image and Actual Normalized, Guassian Blur Image of the plant
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[258]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#x_test[3]</span>
@@ -14366,7 +14423,7 @@ Sample image and Actual Normalized, Guassian Blur Image of the plant
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[259]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#x_test[33]</span>
@@ -14423,7 +14480,7 @@ Sample image and Actual Normalized, Guassian Blur Image of the plant
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[260]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#x_test[36]</span>
@@ -14480,7 +14537,7 @@ Sample image and Actual Normalized, Guassian Blur Image of the plant
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[261]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_test</span><span class="p">[</span><span class="mi">59</span><span class="p">]</span>
